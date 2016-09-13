@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D614EB871D88364F001C26C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D614EB861D88364F001C26C8 /* AppDelegate.swift */; };
+		D614EB891D88364F001C26C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D614EB881D88364F001C26C8 /* ViewController.swift */; };
+		D614EB8C1D88364F001C26C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D614EB8A1D88364F001C26C8 /* Main.storyboard */; };
+		D614EB8E1D88364F001C26C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D614EB8D1D88364F001C26C8 /* Assets.xcassets */; };
+		D614EB911D88364F001C26C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D614EB8F1D88364F001C26C8 /* LaunchScreen.storyboard */; };
+		D614EB991D883891001C26C8 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D614EB981D883891001C26C8 /* BluetoothManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D614EB831D88364F001C26C8 /* Polo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D614EB861D88364F001C26C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D614EB881D88364F001C26C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D614EB8B1D88364F001C26C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D614EB8D1D88364F001C26C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D614EB901D88364F001C26C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D614EB921D88364F001C26C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D614EB981D883891001C26C8 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D614EB801D88364F001C26C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D614EB7A1D88364F001C26C8 = {
+			isa = PBXGroup;
+			children = (
+				D614EB851D88364F001C26C8 /* Polo */,
+				D614EB841D88364F001C26C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D614EB841D88364F001C26C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D614EB831D88364F001C26C8 /* Polo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D614EB851D88364F001C26C8 /* Polo */ = {
+			isa = PBXGroup;
+			children = (
+				D614EB981D883891001C26C8 /* BluetoothManager.swift */,
+				D614EB861D88364F001C26C8 /* AppDelegate.swift */,
+				D614EB881D88364F001C26C8 /* ViewController.swift */,
+				D614EB8A1D88364F001C26C8 /* Main.storyboard */,
+				D614EB8D1D88364F001C26C8 /* Assets.xcassets */,
+				D614EB8F1D88364F001C26C8 /* LaunchScreen.storyboard */,
+				D614EB921D88364F001C26C8 /* Info.plist */,
+			);
+			path = Polo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D614EB821D88364F001C26C8 /* Polo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D614EB951D88364F001C26C8 /* Build configuration list for PBXNativeTarget "Polo" */;
+			buildPhases = (
+				D614EB7F1D88364F001C26C8 /* Sources */,
+				D614EB801D88364F001C26C8 /* Frameworks */,
+				D614EB811D88364F001C26C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Polo;
+			productName = Polo;
+			productReference = D614EB831D88364F001C26C8 /* Polo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D614EB7B1D88364F001C26C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Imprivata;
+				TargetAttributes = {
+					D614EB821D88364F001C26C8 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4M5ZN5CV6L;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D614EB7E1D88364F001C26C8 /* Build configuration list for PBXProject "Polo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D614EB7A1D88364F001C26C8;
+			productRefGroup = D614EB841D88364F001C26C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D614EB821D88364F001C26C8 /* Polo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D614EB811D88364F001C26C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D614EB911D88364F001C26C8 /* LaunchScreen.storyboard in Resources */,
+				D614EB8E1D88364F001C26C8 /* Assets.xcassets in Resources */,
+				D614EB8C1D88364F001C26C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D614EB7F1D88364F001C26C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D614EB891D88364F001C26C8 /* ViewController.swift in Sources */,
+				D614EB991D883891001C26C8 /* BluetoothManager.swift in Sources */,
+				D614EB871D88364F001C26C8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D614EB8A1D88364F001C26C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D614EB8B1D88364F001C26C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D614EB8F1D88364F001C26C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D614EB901D88364F001C26C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D614EB931D88364F001C26C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D614EB941D88364F001C26C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D614EB961D88364F001C26C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4M5ZN5CV6L;
+				INFOPLIST_FILE = Polo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imprivata.Polo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D614EB971D88364F001C26C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4M5ZN5CV6L;
+				INFOPLIST_FILE = Polo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imprivata.Polo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D614EB7E1D88364F001C26C8 /* Build configuration list for PBXProject "Polo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D614EB931D88364F001C26C8 /* Debug */,
+				D614EB941D88364F001C26C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D614EB951D88364F001C26C8 /* Build configuration list for PBXNativeTarget "Polo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D614EB961D88364F001C26C8 /* Debug */,
+				D614EB971D88364F001C26C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D614EB7B1D88364F001C26C8 /* Project object */;
+}
