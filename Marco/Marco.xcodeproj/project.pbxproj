@@ -13,6 +13,7 @@
 		D614EB701D883409001C26C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D614EB6F1D883409001C26C8 /* Assets.xcassets */; };
 		D614EB731D883409001C26C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D614EB711D883409001C26C8 /* LaunchScreen.storyboard */; };
 		D614EB9B1D883FEC001C26C8 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D614EB9A1D883FEC001C26C8 /* BluetoothManager.swift */; };
+		D6E0DE3F1D9182E9005ECF2F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0DE3E1D9182E9005ECF2F /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D614EB721D883409001C26C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D614EB741D883409001C26C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D614EB9A1D883FEC001C26C8 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		D6E0DE3E1D9182E9005ECF2F /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		D614EB671D883409001C26C8 /* Marco */ = {
 			isa = PBXGroup;
 			children = (
+				D6E0DE3E1D9182E9005ECF2F /* Logger.swift */,
 				D614EB9A1D883FEC001C26C8 /* BluetoothManager.swift */,
 				D614EB681D883409001C26C8 /* AppDelegate.swift */,
 				D614EB6A1D883409001C26C8 /* ViewController.swift */,
@@ -143,6 +146,7 @@
 				D614EB6B1D883409001C26C8 /* ViewController.swift in Sources */,
 				D614EB9B1D883FEC001C26C8 /* BluetoothManager.swift in Sources */,
 				D614EB691D883409001C26C8 /* AppDelegate.swift in Sources */,
+				D6E0DE3F1D9182E9005ECF2F /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +310,7 @@
 				D614EB791D883409001C26C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

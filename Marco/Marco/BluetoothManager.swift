@@ -30,13 +30,13 @@ class BluetoothManager: NSObject {
     }
     
     func go() {
-        print("go")
+        log("go")
         guard isPoweredOn else {
-            print("not powered on")
+            log("not powered on")
             return
         }
         guard !isBusy else {
-            print("busy, ignoring request")
+            log("busy, ignoring request")
             return
         }
         isBusy = true
@@ -44,7 +44,7 @@ class BluetoothManager: NSObject {
     }
     
     fileprivate func startScanForPeripheral(serviceUuid: CBUUID) {
-        print("startScanForPeripheral")
+        log("startScanForPeripheral")
         centralManager.stopScan()
         scanTimer = Timer.scheduledTimer(timeInterval: timeoutInSecs, target: self, selector: #selector(timeout), userInfo: nil, repeats: false)
         centralManager.scanForPeripherals(withServices: [serviceUuid], options: nil)
@@ -52,13 +52,13 @@ class BluetoothManager: NSObject {
     
     // can't be private because called by timer
     func timeout() {
-        print("timed out")
+        log("timed out")
         centralManager.stopScan()
         isBusy = false
     }
     
     fileprivate func disconnect() {
-        print("disconnect")
+        log("disconnect")
         centralManager.cancelPeripheralConnection(peripheral)
         peripheral = nil
         characteristic = nil
@@ -85,12 +85,12 @@ extension BluetoothManager: CBCentralManagerDelegate {
         case .poweredOn:
             caseString = "poweredOn"
         }
-        print("centralManagerDidUpdateState \(caseString!)")
+        log("centralManagerDidUpdateState \(caseString!)")
         isPoweredOn = centralManager.state == .poweredOn
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print("centralManager didDiscoverPeripheral")
+        log("centralManager didDiscoverPeripheral")
         scanTimer.invalidate()
         centralManager.stopScan()
         self.peripheral = peripheral
@@ -98,7 +98,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("centralManager didConnectPeripheral")
+        log("centralManager didConnectPeripheral")
         self.peripheral.delegate = self
         peripheral.discoverServices([serviceUUID])
     }
@@ -109,20 +109,20 @@ extension BluetoothManager: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         let message = "peripheral didDiscoverServices " + (error == nil ? "ok" :  ("error " + error!.localizedDescription))
-        print(message)
+        log(message)
         guard error == nil else { return }
         for service in peripheral.services! {
-            print("service \(service.uuid)")
+            log("service \(service.uuid)")
             peripheral.discoverCharacteristics(nil, for: service)
         }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         let message = "peripheral didDiscoverCharacteristicsFor service " + (error == nil ? "\(service.uuid) ok" :  ("error " + error!.localizedDescription))
-        print(message)
+        log(message)
         guard error == nil else { return }
         for characteristic in service.characteristics! {
-            print("characteristic \(characteristic.uuid)")
+            log("characteristic \(characteristic.uuid)")
             if characteristic.uuid == characteristicUUID {
                 self.characteristic = characteristic
                 peripheral.readValue(for: characteristic)
@@ -132,13 +132,13 @@ extension BluetoothManager: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         let message = "peripheral didUpdateValueFor characteristic " + (error == nil ? "\(characteristic.uuid) ok" :  ("error " + error!.localizedDescription))
-        print(message)
+        log(message)
         defer {
             disconnect()
         }
         guard error == nil else { return }
         let response = String(data: characteristic.value!, encoding: String.Encoding.utf8)!
-        print("\(response)")
+        log("\(response)")
     }
     
 }

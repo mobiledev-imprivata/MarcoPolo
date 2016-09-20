@@ -22,7 +22,7 @@ class BluetoothManager: NSObject {
     }
     
     fileprivate func addService() {
-        print("addService")
+        log("addService")
         peripheralManager.stopAdvertising()
         peripheralManager.removeAllServices()
         let service = CBMutableService(type: serviceUUID, primary: true)
@@ -32,7 +32,7 @@ class BluetoothManager: NSObject {
     }
     
     fileprivate func startAdvertising() {
-        print("startAdvertising")
+        log("startAdvertising")
         peripheralManager.startAdvertising([CBAdvertisementDataServiceUUIDsKey: [serviceUUID]])
     }
     
@@ -56,7 +56,7 @@ extension BluetoothManager: CBPeripheralManagerDelegate {
         case .poweredOn:
             caseString = "poweredOn"
         }
-        print("peripheralManagerDidUpdateState \(caseString!)")
+        log("peripheralManagerDidUpdateState \(caseString!)")
         if peripheral.state == .poweredOn {
             addService()
         }
@@ -64,7 +64,7 @@ extension BluetoothManager: CBPeripheralManagerDelegate {
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
         let message = "peripheralManager didAddService " + (error == nil ? "ok" :  ("error " + error!.localizedDescription))
-        print(message)
+        log(message)
         if error == nil {
             startAdvertising()
         }
@@ -72,11 +72,11 @@ extension BluetoothManager: CBPeripheralManagerDelegate {
     
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
         let message = "peripheralManagerDidStartAdvertising " + (error == nil ? "ok" :  ("error " + error!.localizedDescription))
-        print(message)
+        log(message)
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
-        print("peripheralManager didReceiveRead request")
+        log("peripheralManager didReceiveRead request")
         let response = "Polo!"
         request.value = response.data(using: String.Encoding.utf8, allowLossyConversion: false)
         peripheralManager.respond(to: request, withResult: .success)
